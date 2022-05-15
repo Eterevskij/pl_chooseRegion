@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin-bottom: 0em !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background: #adadad !important;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.SelectRegionPopup__wrapper {
+  background: #fff;
+  font-family: Inter;
+  margin: 0 auto;
+  max-width: 640px;
+  padding: 48px 0px 22px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.SelectRegionPopup__container {
+  padding: 0 48px;
+}
+
+.SelectRegionPopup__list {
+  padding: 0 48px;
+}
+
+.SelectRegionPopup__title {
+  color: #2b2b2b;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.SelectRegionPopup__searchBlock {
+  margin-top: 24px;
+}
+
+.SelectRegionPopup__searchBlock__input {
+  background: #F4F4F4;
+  border-radius: 8px;
+  height: 56px;
+  border: none !important;
+  box-shadow: none;
+}
+
+.ant-input-affix-wrapper:hover {
+  border: 1px solid #4DB663 !important;
+  background: transparent;
+}
+
+.SelectRegionPopup__searchBlock__input .ant-input {
+  font-size: 16px;
+  background: transparent;
+  color: #7A7A7A;
+  padding-right: 25px !important;
+}
+
+.SelectRegionPopup__searchBlock__input .ant-input::placeholder {
+  color: #7A7A7A;
+}
+
+.ant-checkbox-inner {
+  padding-left: 0 !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px !important;
+  background: #F6F8F9;
+  border: 1px solid #B0BABF !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #4DB663;
+  border: none !important;
+}
+
+.ant-checkbox-inner::after {
+  left: 30% !important;
+}
+
+.SelectRegionPopup__searchBlock__input .ant-input-suffix svg {
+  height: 100%;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.SelectRegionPopup__searchBlock__checkbox .ant-checkbox-input {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.SelectRegionPopup__searchBlock__checkbox {
+  margin-top: 16px;
+}
+
+.SelectRegionPopup__searchBlock__checkbox span {
+  padding-left: 16px;
+  font-size: 16px;
+  color: #2B2B2B;
+}
+
+.ant-checkbox {
+  padding-left: 0 !important;
+  border: none !important;
+}
+
+.ant-checkbox-checked::after {
+  border: transparent !important;
+}
+
+.SelectRegionPopup__list {
+  margin-top: 32px;
+  max-height: 300px;
+  overflow-x: hidden;
+}
+
+.SelectRegionPopup__list__item+.SelectRegionPopup__list__item {
+  margin-top: 16px;
+}
+
+.SelectRegionPopup__list__item {
+  color: #2b2b2b;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  transition: 0.3s color;
+}
+
+.SelectRegionPopup__list__item:hover {
+  color: #4db663;
+}
+
+.SelectRegionPopup__quickAccess__item {
+  display: inline-block;
+  color: #2b2b2b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #4DB663;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.SelectRegionPopup__quickAccess__item:hover {
+  background: #4db663;
+  color: #fff;
+  border: 1px solid #4db663;
+}
+
+.SelectRegionPopup__quickAccess {
+  margin-top: 32px;
+}
+
+.SelectRegionPopup__list::-webkit-scrollbar {
+  width: 24px;
+}
+
+.SelectRegionPopup__list::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.SelectRegionPopup__list::-webkit-scrollbar-thumb {
+  background-color: #BCBEC0;
+  border-radius: 20px;
+  border: 8px solid #fff;
+}
+
+@media (max-width: 576px) {
+
+  .SelectRegionPopup__title {
+    font-size: 28px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .SelectRegionPopup__list__item {
+    margin-top: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .SelectRegionPopup__list {
+    padding: 0px 24px;
+    margin-top: 6px;
   }
+
+  .SelectRegionPopup__container {
+    padding: 20px 20px 10px;
+  }
+
+  .SelectRegionPopup__searchBlock__input {
+    padding: 2px 6px;
+  }
+
+  .SelectRegionPopup__quickAccess__item {
+    padding: 6px 12px;
+  }
+
+  .SelectRegionPopup__quickAccess .ant-row {
+    margin-left: -3px !important;
+    margin-right: -3px !important;
+    row-gap: 6px !important;
+  }
+
+  .SelectRegionPopup__quickAccess .ant-col {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+
 }
